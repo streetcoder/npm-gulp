@@ -19,22 +19,16 @@ gulp.task('scripts', function(){
 
 gulp.task('sass', function() {
     return sass('scss', { style: 'expanded' })
-        .pipe(plumber())
+        .on('error', console.error.bind(console))
         .pipe(gulp.dest('css'));
 });
 
-// task: style
-
-gulp.task('styles', function(){
-    gulp.src('scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('css/'));
-});
 
 // task: watch
 
 gulp.task('watch', function(){
     gulp.watch('js/*.js' , ['scripts']);
+    gulp.watch('scss' , ['sass']);
 });
 
 gulp.task('default', ['scripts' , 'sass' , 'watch']);

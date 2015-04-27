@@ -1,4 +1,36 @@
-body {
-  font: 100% Helvetica, sans-serif;
-  color: #333;
-}
+/*
+Error: Invalid CSS after "body ": expected selector or at-rule, was "{"
+        on line 4 of scss/style.scss
+
+1: $font-stack:    Helvetica, sans-serif;
+2: $primary-color: #333
+3: 
+4: body {
+5:   font: 100% $font-stack;
+6:   color: $primary-color;
+7: }
+
+Backtrace:
+scss/style.scss:4
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:1167:in `expected'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:1101:in `expected'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/scss/parser.rb:43:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/engine.rb:393:in `_to_tree'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/plugin.rb:82:in `update_stylesheets'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:361:in `watch_or_update'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:52:in `parse'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/lib/sass/exec/base.rb:19:in `parse!'
+/var/lib/gems/1.9.1/gems/sass-3.4.13/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"body \": expected selector or at-rule, was \"{\"\A         on line 4 of scss/style.scss\A \A 1: $font-stack:    Helvetica, sans-serif;\A 2: $primary-color: #333\A 3: \A 4: body {\A 5:   font: 100% $font-stack;\A 6:   color: $primary-color;\A 7: }"; }
