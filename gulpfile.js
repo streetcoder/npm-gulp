@@ -7,6 +7,10 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     plumber = require('gulp-plumber');
 
+function errorLog(error){
+    console.error.bind(error);
+    this.emit('end');
+}
 // task: script
 gulp.task('scripts', function(){
 
@@ -19,7 +23,7 @@ gulp.task('scripts', function(){
 
 gulp.task('sass', function() {
     return sass('scss', { style: 'expanded' })
-        .on('error', console.error.bind(console))
+        .on('error', errorLog)
         .pipe(gulp.dest('css'));
 });
 
