@@ -17,6 +17,7 @@ gulp.task('scripts', function(){
     gulp.src('js/*.js')
         .pipe(plumber())
         .pipe(uglify())
+        .on('error', errorLog)
         .pipe(gulp.dest('build/js'));
 
 });
